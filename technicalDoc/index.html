@@ -1,0 +1,690 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!-- 
+
+Hello Camper!
+
+For now, the test suite only works in Chrome! Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding! 
+
+- The freeCodeCamp Team 
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="image icon" href="favicon.png" type="image/png" >
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>C++ Technical Documentation</title>
+</head>
+
+<body>
+  
+
+    <nav id="navbar">
+      <header >C++ Language.</header>
+      <ul>
+        <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+        <li><a href="#Complier" class="nav-link">Complier</a></li>
+        <li><a href="#Structure_of_a_program" class="nav-link">Structure of a program</a></li>
+        <li><a href="#Variables_and_types" class="nav-link">Variables and types</a></li>
+        <li><a href="#Control_Structure" class="nav-link">Control structure</a></li>
+        <li><a href="#Functions" class="nav-link">Functions</a></li>
+        <li><a href="#Arrays" class="nav-link">Arrays</a></li>
+        <li><a href="#Reference" class="nav-link">Reference</a></li>
+      </ul>
+            
+    </nav>
+    <main id="main-doc">
+    <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+
+    
+        
+        <p>These tutorials explain the C++ language from its basics up to the newest features introduced by C++11. Chapters have a practical orientation, 
+          with example programs in all sections to start practicing what is being explained right away.
+        </p>
+        <li>Compilers.</li>
+        <li>Structure of a program.</li>
+        <li>Variables and types.</li>
+        <li>Control Structures.</li>
+        <li>Functions.</li>
+        <li>Arrays.</li>
+        <li>C++ Standard Library.</li>
+        <p>C++ is a multi-paradigm programming language that supports object-oriented programming (OOP), created by Bjarne Stroustrup in 1983 at Bell Labs, C++ is an extension(superset) of C programming and the programs are written in C language can run in C++ compilers.</p> 
+    </section>
+
+    <br>
+    <section class="main-section" id="Complier">
+      <header > Complier
+      </header>
+      <p>
+        Computers understand only one language and that language consists of sets of instructions made of ones and zeros. This computer language is appropriately called machine language.
+        The essential tools needed to follow these tutorials are a computer and a compiler toolchain able to compile C++ code and build the programs to run on it.
+
+        C++ is a language that has evolved much over the years, and these tutorials explain many features added recently to the language. Therefore, in order to properly follow the tutorials, a recent compiler is needed. It shall support (even if only partially) the features introduced by the 2011 standard.    
+        Many compiler vendors support the new features at different degrees. See the bottom of this page for some compilers that are known to support the features needed. Some of them are free!
+            
+        If for some reason, you need to use some older compiler, you can access an older version of these tutorials here (no longer updated).
+        This is a portion of code written in C++ that accomplishes the exact same purpose:
+      </p>
+      <pre>
+        <code id="complierCode">
+        int a, b, sum;
+      
+        cin >> a;
+        cin >> b;
+                        
+        sum = a + b;
+        cout << sum << endl;
+        </code>
+      </pre>
+
+      <li class="extras">Console programs:</li>
+      <p>
+       Console programs are programs that use text to communicate with the user and the environment, such as printing text to the screen or reading input from a keyboard.
+
+       Console programs are easy to interact with, and generally have a predictable behavior that is identical across all platforms. They are also simple to implement and thus are very useful to learn the basics of a programming language: The examples in these tutorials are all console programs.
+          
+       The way to compile console programs depends on the particular tool you are using.
+          
+       The easiest way for beginners to compile C++ programs is by using an Integrated Development Environment (IDE). An IDE generally integrates several development tools, including a text editor and tools to compile programs directly from it.
+      </p>
+    </section>
+
+    <br>
+
+    <section class="main-section" id="Structure_of_a_program">
+      <header>Structure of a program</header>
+      <p>
+        The best way to learn a programming language is by writing programs. Typically, the first program beginners write is a program called "Hello World", which simply prints "Hello World" to your computer screen. Although it is very simple, it contains all the fundamental components C++ programs have:
+      </p>
+
+      <pre>
+        <code>
+            // my first program in C++
+            #include <iostream>
+            
+            int main()
+            {
+              std::cout << "Hello World!";
+            }
+        </code>
+        OUTPUT: Hello World!
+      </pre>
+
+      <p>
+        You may have noticed that not all the lines of this program perform actions when the code is executed. There is a line containing a comment (beginning with //). There is a line with a directive for the preprocessor (beginning with #). There is a line that defines a function (in this case, the main function). And, finally, a line with a statements ending with a semicolon (the insertion into cout), which was within the block delimited by the braces ( { } ) of the main function. 
+
+       The program has been structured in different lines and properly indented, in order to make it easier to understand for the humans reading it. But C++ does not have strict rules on indentation or on how to split instructions in different lines. For example, instead of 
+      </p>
+
+      <pre>
+        <code>
+        int main () { std::cout << "Hello World!"; }
+        </code>
+      </pre>
+
+      <li class="extras">Comments:</li>
+
+      <p>
+      As noted above, comments do not affect the operation of the program; however, they provide an important tool to document directly within the source code what the program does and how it operates.
+
+      The first of them, known as line comment, discards everything from where the pair of slash signs (//) are found up to the end of that same line. The second one, known as block comment, discards everything between the /* characters and the first appearance of the */ characters, with the possibility of including multiple lines.
+
+      Let's add comments to our second program:
+      </p>
+
+      <pre>
+        <code>
+            /* my second program in C++
+            with more comments */
+         
+         #include <iostream>
+         
+         int main ()
+         {
+           std::cout << "Hello World! ";     // prints Hello World!
+           std::cout << "I'm a C++ program"; // prints I'm a C++ program
+         }
+        </code>
+        OUTPUT:Hello World! I'm a C++ program
+      </pre>
+
+      <p>
+        If comments are included within the source code of a program without using the comment characters combinations //, /* or */, the compiler takes them as if they were C++ expressions, most likely causing the compilation to fail with one, or several, error messages.
+      </p>
+
+      <li class="extras">Using namespace std</li>
+
+      <p>
+          If you have seen C++ code before, you may have seen cout being used instead of <code> std::cout.</code> Both name the same object: the first one uses its unqualified name (cout), while the second qualifies it directly within the namespace std (as std::cout).
+
+          cout is part of the standard library, and all the elements in the standard C++ library are declared within what is called a namespace: the namespace std.
+          
+          In order to refer to the elements in the std namespace a program shall either qualify each and every use of elements of the library (as we have done by prefixing cout with std::), or introduce visibility of its components. The most typical way to introduce visibility of these components is by means of using declarations:
+      </p>
+
+      <pre>
+        <code>
+            // my second program in C++
+            #include <iostream>
+            using namespace std;
+            
+            int main ()
+            {
+              cout << "Hello World! ";
+              cout << "I'm a C++ program";
+            }
+        </code>
+      </pre>
+    </section>
+
+    <br>
+
+    <section class="main-section" id="Variables_and_types">
+      <header>Variables and types</header>
+      <p>
+          The usefulness of the "Hello World" programs shown in the previous chapter is rather questionable. We had to write several lines of code, compile them, and then execute the resulting program, just to obtain the result of a simple sentence written on the screen. It certainly would have been much faster to type the output sentence ourselves.
+
+          However, programming is not limited only to printing simple texts on the screen. In order to go a little further on and to become able to write programs that perform useful tasks that really save us work, we need to introduce the concept of variables.
+          
+          Let's imagine that I ask you to remember the number 5, and then I ask you to also memorize the number 2 at the same time. You have just stored two different values in your memory (5 and 2). Now, if I ask you to add 1 to the first number I said, you should be retaining the numbers 6 (that is 5+1) and 2 in your memory. Then we could, for example, subtract these values and obtain 4 as result.
+          
+          The whole process described above is a simile of what a computer can do with two variables. The same process can be expressed in C++ with the following set of statements:
+      </p>
+
+      <pre>
+        <code>
+            a = 5;
+            b = 2;
+            a = a + 1;
+            result = a - b;
+        </code>
+      </pre>
+
+      <li class="extras">Identifiers:</li>
+      <p>
+          A valid identifier is a sequence of one or more letters, digits, or underscore characters (_). Spaces, punctuation marks, and symbols cannot be part of an identifier. In addition, identifiers shall always begin with a letter. They can also begin with an underline character (_), but such identifiers are -on most cases- considered reserved for compiler-specific keywords or external identifiers, as well as identifiers containing two successive underscore characters anywhere. In no case can they begin with a digit.
+
+          C++ uses a number of keywords to identify operations and data descriptions; therefore, identifiers created by a programmer cannot match these keywords. The standard reserved keywords that cannot be used for programmer created identifiers are:
+          <code>alignas, alignof, and, and_eq, asm, auto, bitand, bitor, bool, break, case, catch, char, char16_t, char32_t, class, compl, const, constexpr, const_cast, continue, decltype, default, delete, do, double, dynamic_cast, else, enum, explicit, export, extern, false, float, for, friend, goto, if, inline, int, long, mutable, namespace, new, noexcept, not, not_eq, nullptr, operator, or, or_eq, private, protected, public, register, reinterpret_cast, return, short, signed, sizeof, static, static_assert, static_cast, struct, switch, template, this, thread_local, throw, true, try, typedef, typeid, typename, union, unsigned, using, virtual, void, volatile, wchar_t, while, xor, xor_eq</code>
+      </p>
+
+      <li class="extras">Fundamental data types:</li>
+
+      <p>
+        The values of variables are stored somewhere in an unspecified location in the computer memory as zeros and ones. Our program does not need to know the exact location where a variable is stored; it can simply refer to it by its name. What the program needs to be aware of is the kind of data stored in the variable. It's not the same to store a simple integer as it is to store a letter or a large floating-point number; even though they are all represented using zeros and ones, they are not interpreted in the same way, and in many cases, they don't occupy the same amount of memory.
+
+        Fundamental data types are basic types implemented directly by the language that represent the basic storage units supported natively by most systems. They can mainly be classified into:
+        <br> <b> Character types:</b> They can represent a single character, such as 'A' or '$'. The most basic type is char, which is a one-byte character. Other types are also provided for wider characters.
+        <br><b> Numerical integer types:</b> They can store a whole number value, such as 7 or 1024. They exist in a variety of sizes, and can either be signed or unsigned, depending on whether they support negative values or not.
+        <br><b> Floating-point types:</b> They can represent real values, such as 3.14 or 0.01, with different levels of precision, depending on which of the three floating-point types is used.
+        <br><b> Boolean type:</b> The boolean type, known in C++ as bool, can only represent one of two states, true or false.
+      </p>
+      <br>
+
+      <table>
+        <caption>Here is the complete list of fundamental types in C++:</caption>
+        <tr>
+          <th>Group</th>
+          <th>Type names*</th>
+          <th>Notes on size / precision</th>
+        </tr>
+
+        <tr>
+          <td>Character types</td>
+          <td>char</td>
+          <td>Exactly one byte in size. At least 8 bits.</td>   
+        </tr>
+
+        <tr>
+          <td>Integer types (signed)</td>
+          <td>signed char</td>
+          <td>Same size as char. At least 8 bits.</td>
+        </tr>
+
+        <tr>
+          <td>Integer types (unsigned)</td>
+          <td>unsigned long int</td>
+          <td>unsigned long int</td>
+        </tr>
+
+        <tr>
+            <td>Void type</td>
+            <td>void</td>
+            <td>no storage</td>
+        </tr>
+
+        <tr>
+            <td>Floating-point types</td>
+            <td>double</td>
+            <td>no storage</td>
+        </tr>
+      </table>
+      <br>
+      <p>
+          Note in the panel above that other than char (which has a size of exactly one byte), none of the fundamental types has a standard size specified (but a minimum size, at most). Therefore, the type is not required (and in many cases is not) exactly this minimum size. This does not mean that these types are of an undetermined size, but that there is no standard size across all compilers and machines; each compiler implementation may specify the sizes for these types that fit the best the architecture where the program is going to run. This rather generic size specification for types gives the C++ language a lot of flexibility to be adapted to work optimally in all kinds of platforms, both present and future. 
+      </p>
+
+      <table>
+        <caption>
+            Type sizes above are expressed in bits; the more bits a type has, the more distinct values it can represent, but at the same time, also consumes more space in memory:</caption>
+        <br>
+          <tr>
+            <th>Size</th>
+            <th>Unique representable values</th>
+            <th>Notes</th>
+          </tr>
+
+          <tr>
+            <td>8-bit</td>
+            <td class="second">256</td>
+            <td>=2 <sup>8</sup></td>
+          </tr>
+
+          <tr>
+              <td>16-bit</td>
+              <td class="second">65 536</td>
+              <td>=2 <sup>16</sup></td>
+          </tr>
+
+          <tr>
+              <td>32-bit</td>
+              <td class="second">4 294 967 296</td>
+              <td>=2 <sup>32</sup> (~4 billion)</td>
+            </tr>
+
+            <tr>
+                <td>64-bit</td>
+                <td class="second">18 446 744 073 709 551 616</td>
+                <td>=2 <sup>64</sup> (~18 billion billion)</td>
+              </tr>
+      </table>
+
+      <br>
+
+      <p>
+      For integer types, having more representable values means that the range of values they can represent is greater; for example, a 16-bit unsigned integer would be able to represent 65536 distinct values in the range 0 to 65535, while its signed counterpart would be able to represent, on most cases, values between -32768 and 32767. Note that the range of positive values is approximately halved in signed types compared to unsigned types, due to the fact that one of the 16 bits is used for the sign; this is a relatively modest difference in range, and seldom justifies the use of unsigned types based purely on the range of positive values they can represent.
+
+      </p>
+
+      <li class="extras">Declaration of variables</li>
+      <p>C++ is a strongly-typed language, and requires every variable to be declared with its type before its first use. This informs the compiler the size to reserve in memory for the variable and how to interpret its value. The syntax to declare a new variable in C++ is straightforward: we simply write the type followed by the variable name (i.e., its identifier). For example:</p>
+      <pre>
+        <code>
+            // operating with variables
+
+            #include <iostream>
+            using namespace std;
+
+            int main ()
+            {
+              // declaring variables:
+              int a, b;
+              int result;
+
+              // process:
+              a = 5;
+              b = 2;
+              a = a + 1;
+              result = a - b;
+
+              // print out the result:
+              cout << result;
+
+              // terminate the program:
+              return 0;
+            } 
+        </code>
+      </pre>
+
+      <li class="extras">Initialization of variables</li>
+      <p>
+          When the variables in the example above are declared, they have an undetermined value until they are assigned a value for the first time. But it is possible for a variable to have a specific value from the moment it is declared. This is called the initialization of the variable.
+
+          In C++, there are three ways to initialize variables. They are all equivalent and are reminiscent of the evolution of the language over the years:
+          
+          The first one, known as c-like initialization (because it is inherited from the C language), consists of appending an equal sign followed by the value to which the variable is initialized:
+          
+          type identifier = initial_value; 
+          For example, to declare a variable of type int called x and initialize it to a value of zero from the same moment it is declared, we can write
+      </p>
+
+      <pre>
+        <code>
+            // initialization of variables
+
+            #include <iostream>
+            using namespace std;
+            
+            int main ()
+            {
+              int a=5;               // initial value: 5
+              int b(3);              // initial value: 3
+              int c{2};              // initial value: 2
+              int result;            // initial value undetermined
+            
+              a = a + b;
+              result = a - c;
+              cout << result;
+            
+              return 0;
+            }
+           
+
+        </code>
+      </pre>
+
+      <br>
+
+      <li class="extras">Introduction to strings</li>
+      <p>Fundamental types represent the most basic types handled by the machines where the code may run. But one of the major strengths of the C++ language is its rich set of compound types, of which the fundamental types are mere building blocks.
+
+          An example of compound type is the string class. Variables of this type are able to store sequences of characters, such as words or sentences. A very useful feature!
+           A first difference with fundamental data types is that in order to declare and use objects (variables) of this type, the program needs to include the header where the type is defined within the standard library (header <string>):</p>
+    <pre>
+      <code>
+          / my first string
+          #include <iostream>
+          #include <string>
+          using namespace std;
+          
+          int main ()
+          {
+            string mystring;
+            mystring = "This is the initial string content";
+            cout << mystring << endl;
+            mystring = "This is a different string content";
+            cout << mystring << endl;
+            return 0;
+          }
+      </code>
+    </pre>
+
+    <p>
+        Note: inserting the endl manipulator ends the line (printing a newline character and flushing the stream).
+
+        The string class is a compound type. As you can see in the example above, compound types are used in the same way as fundamental types: the same syntax is used to declare variables and to initialize them.
+    </p>
+    </section>
+
+    <br>
+    
+    <section class="main-section" id="Control_Structure">
+      <header>Control Structure</header>
+
+      <p>
+          simple C++ statement is each of the individual instructions of a program, like the variable declarations and expressions seen in previous sections. They always end with a semicolon (;), and are executed in the same order in which they appear in a program.
+
+          But programs are not limited to a linear sequence of statements. During its process, a program may repeat segments of code, or take decisions and bifurcate. For that purpose, C++ provides flow control statements that serve to specify what has to be done by our program, when, and under which circumstances.
+      </p>
+
+      <li class="extras">Selection statements: if and else</li>
+    <p>The if keyword is used to execute a statement or block, if, and only if, a condition is fulfilled. Its syntax is:
+        <br><code>if (condition) statement</code>  <br>
+        If you want to include more than a single statement to be executed when the condition is fulfilled, these statements shall be enclosed in braces ({}), forming a block:
+    </p>
+
+    <pre>
+      <code>
+          if (x == 100)
+          {
+             cout << "x is ";
+             cout << x;
+          } 
+      </code>
+    </pre>
+
+    <li class="extras">Iteration statements (loops)</li>
+    <p>Loops repeat a statement a certain number of times, or while a condition is fulfilled. They are introduced by the keywords while, do, and for.
+      <br> <b>The While Loop </b> <br>
+        The simplest kind of loop is the while-loop. Its syntax is:
+        
+       <br> <code> while (expression) statement</code>
+        
+        The while-loop simply repeats statement while expression is true. If, after any execution of statement, expression is no longer true, the loop ends, and the program continues right after the loop. For example, let's have a look at a countdown using a while-loop:</p>
+    <li class="extras">The do-while loop</li>
+    
+    <p> very similar loop is the do-while loop, whose syntax is:
+
+       <br> <code>do statement while (condition); </code>
+        
+        It behaves like a while-loop, except that condition is evaluated after the execution of statement instead of before, guaranteeing at least one execution of statement, even if condition is never fulfilled. For example, the following example program echoes any text the user introduces until the user enters goodbye:</p>
+    
+        <pre>
+          <code>
+              // echo machine
+              #include <iostream>
+              #include <string>
+              using namespace std;
+              
+              int main ()
+              {
+                string str;
+                do {
+                  cout << "Enter text: ";
+                  getline (cin,str);
+                  cout << "You entered: " << str << '\n';
+                } while (str != "goodbye");
+              }
+          </code>
+        </pre>
+        
+        <li class="extras">Jump statements</li>
+
+        <p>
+            Jump statements allow altering the flow of a program by performing jumps to specific locations.
+
+           <br> <b> The break statement</b> <br>
+            break leaves a loop, even if the condition for its end is not fulfilled. It can be used to end an infinite loop, or to force it to end before its natural end. For example, let's stop the countdown before its natural end:
+        </p>
+
+        <pre>
+          <code>
+              // break loop example
+              #include <iostream>
+              using namespace std;
+              
+              int main ()
+              {
+                for (int n=10; n>0; n--)
+                {
+                  cout << n << ", ";
+                  if (n==3)
+                  {
+                    cout << "countdown aborted!";
+                    break;
+                  }
+                }
+              }
+          </code>
+        </pre>
+      </section>
+      
+      <section class="main-section" id="Functions">
+        <header>Functions</header>
+          
+          <p>
+              Functions allow to structure programs in segments of code to perform individual tasks.
+
+              In C++, a function is a group of statements that is given a name, and which can be called from some point of the program. The most common syntax to define a function is:
+              <br>
+              <code>type name ( parameter1, parameter2, ...) { statements } </code>
+              A function can actually be called multiple times within a program, and its argument is naturally not limited just to literals:
+            </p>
+            <pre>
+              <code>
+                  // function example
+                  #include <iostream>
+                  using namespace std;
+                  
+                  int subtraction (int a, int b)
+                  {
+                    int r;
+                    r=a-b;
+                    return r;
+                  }
+                  
+                  int main ()
+                  {
+                    int x=5, y=3, z;
+                    z = subtraction (7,2);
+                    cout << "The first result is " << z << '\n';
+                    cout << "The second result is " << subtraction (7,2) << '\n';
+                    cout << "The third result is " << subtraction (x,y) << '\n';
+                    z= 4 + subtraction (x,y);
+                    cout << "The fourth result is " << z << '\n';
+                  }
+              </code>
+            </pre>
+
+            <li class="extras">Arguments passed by value and by reference</li>
+            <p>
+                In the functions seen earlier, arguments have always been passed by value. This means that, when calling a function, what is passed to the function are the values of these arguments on the moment of the call, which are copied into the variables represented by the function parameters. For example, take:
+            </p>
+            
+            <pre>
+              <code>
+                  // passing parameters by reference
+                  #include <iostream>
+                  using namespace std;
+                  
+                  void duplicate (int& a, int& b, int& c)
+                  {
+                    a*=2;
+                    b*=2;
+                    c*=2;
+                  }
+                  
+                  int main ()
+                  {
+                    int x=1, y=3, z=7;
+                    duplicate (x, y, z);
+                    cout << "x=" << x << ", y=" << y << ", z=" << z;
+                    return 0;
+                  }
+              </code>
+            </pre>
+
+            <p>
+                The call passes two arguments to the function. Therefore, the default value for b (int b=2) is ignored, and b takes the value passed as argument, that is 4, yielding a result of 5.</p>
+        <li class="extras">Recursivity</li>
+        <p>Recursivity is the property that functions have to be called by themselves. It is useful for some tasks, such as sorting elements, or calculating the factorial of numbers. For example, in order to obtain the factorial of a number (n!) the mathematical formula would be:</p>
+      <pre>
+        <code>
+            // factorial calculator
+            #include <iostream>
+            using namespace std;
+            
+            long factorial (long a)
+            {
+              if (a > 1)
+               return (a * factorial (a-1));
+              else
+               return 1;
+            }
+            
+            int main ()
+            {
+              long number = 9;
+              cout << number << "! = " << factorial (number);
+              return 0;
+            
+        </code>
+      </pre>
+      </section>
+  
+      <section class="main-section" id="Arrays">
+        <header>Arrays</header>
+        <p>
+            An array is a series of elements of the same type placed in contiguous memory locations that can be individually referenced by adding an index to a unique identifier.
+
+            That means that, for example, five values of type int can be declared as an array without having to declare 5 different variables (each with its own identifier). Instead, using an array, the five int values are stored in contiguous memory locations, and all five can be accessed using the same identifier, with the proper index.
+        </p>
+        <li class="extras">Initializing arrays</li>
+      <p>By default, regular arrays of local scope (for example, those declared within a function) are left uninitialized. This means that none of its elements are set to any particular value; their contents are undetermined at the point the array is declared</p>
+      <pre>
+        <code>
+            int foo[] = { 10, 20, 30 };
+            int foo[] { 10, 20, 30 }; 
+        </code>
+      </pre>
+
+      <p>Notice that the third element of foo is specified foo[2], since the first one is foo[0], the second one is foo[1], and therefore, the third one is foo[2]. By this same reason, its last element is foo[4]. Therefore, if we write foo[5], we would be accessing the sixth element of foo, and therefore actually exceeding the size of the array.
+
+          In C++, it is syntactically correct to exceed the valid range of indices for an array. This can create problems, since accessing out-of-range elements do not cause errors on compilation, but can cause errors on runtime. The reason for this being allowed will be seen in a later chapter when pointers are introduced.
+          
+          At this point, it is important to be able to clearly distinguish between the two uses that brackets [] have related to arrays. They perform two different tasks: one is to specify the size of arrays when they are declared; and the second one is to specify indices for concrete array elements when they are accessed. Do not confuse these two possible uses of brackets [] with arrays.
+        </p>
+          <pre>
+            <code>
+                // arrays example
+                #include <iostream>
+                using namespace std;
+                
+                int foo [] = {16, 2, 77, 40, 12071};
+                int n, result=0;
+                
+                int main ()
+                {
+                  for ( n=0 ; n<'5' ; ++n )
+                  {
+                    result += foo[n];
+                  }
+                  cout << result;
+                  return 0;
+                }
+            </code>
+          </pre>
+          <li class="extras">Multidimensional arrays</li>
+          <p>Multidimensional arrays can be described as "arrays of arrays". For example, a bidimensional array can be imagined as a two-dimensional table made of elements, all of them of a same uniform data type.
+              With the only difference that with multidimensional arrays, the compiler automatically remembers the depth of each imaginary dimension. The following two pieces of code produce the exact same result, but one uses a bidimensional array while the other uses a simple array: 
+          </p>
+          <pre>
+            <code>
+                // arrays as parameters
+                #include <iostream>
+                using namespace std;
+                
+                void printarray (int arg[], int length) {
+                  for (int n=0; n<'length; ++n)
+                    cout << arg[n] << ' ';
+                  cout << '\n';
+                }
+                
+                int main ()
+                {
+                  int firstarray[] = {5, 10, 15};
+                  int secondarray[] = {2, 4, 6, 8, 10};
+                  printarray (firstarray,3);
+                  printarray (secondarray,5);
+                }
+            </code>
+          </pre>
+          <p>
+              In the code above, the first parameter (int arg[]) accepts any array whose elements are of type int, whatever its length. For that reason, we have included a second parameter that tells the function the length of each array that we pass to it as its first parameter. This allows the for loop that prints out the array to know the range to iterate in the array passed, without going out of range.
+          </p>
+        </section>
+
+        <section class="main-section" id="Reference">
+          <header >Reference</header>
+          <p>For more information you can check out more documentaion from <a href="http://www.cplusplus.com/doc/tutorial/" target="_blank" >Cplusplus official site.</a> </p>
+        </section>
+        <div class="cls"></div>
+        <footer>
+          <p>
+             <div> &#9822;Simba Matutu</div>
+             <div> &#9820;Beihang</div>
+             <div> &#9820; PO Box 866</div>
+             <div> &#9742; 010-97637622</div>
+             <div> &#9878; 2019 &c,Production.</div>
+          </p>
+        </footer>
+
+  </main>
+</body>
+</html>

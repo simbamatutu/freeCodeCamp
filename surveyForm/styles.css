@@ -1,0 +1,90 @@
+body{
+  background:linear-gradient(289deg ,#9fc7da,#ffcccc);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 15px;
+   margin-left: 60px;
+}
+
+h1{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+}
+
+form{
+  background:rgba(155, 154, 182, 0.623);
+  margin-left: 60px;
+  box-sizing: content-box;
+  width: 1000px;
+  border: solid #56abba5b 2px;
+  padding: 5px;
+}
+
+#description{
+  text-align: center;
+  text-decoration: #4277c75b;
+  font-family: cursive;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+hr{
+ height: 1px;
+
+}
+
+ 
+
+.elementFirst label{
+  text-align: center;
+}
+.elementfourth{
+  display: block;
+}
+#submit{
+  height: 50px;
+  width: 80px;
+  background-color: cyan;
+  text-align: center;
+  position: relative;
+  left: 35%;
+  border-radius: 4px;
+  
+
+}
+ 
+#textareaOne{
+  position: relative;
+  left: 41%;
+}
+#textOne{
+  height: 80px;
+  width: 150px;
+  position: relative;
+  left: 6%;
+}
+#submit:hover{
+  animation-name:width;
+  animation-duration: 800ms; 
+}
+@keyframes width{
+  100%{
+    width: 90px;
+    background: crimson;
+  }
+  30%{
+    width: 75px;
+    background: rgb(6, 216, 216);
+  }
+}
+.elementFirst input{
+  border-radius: 4px;
+  margin: 10px;
+  border-right: 30px;
+  padding: 5px;
+  width: 160px;
+  height: 10px;
+}
+
+input{
+  border-radius: 4px;
+
+}

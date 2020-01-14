@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css?family=Blinker&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+body{
+  background:  hsl(187, 31%, 19%);
+  font-family: 'Nunito', sans-serif;
+  color: whitesmoke;
+  position: absolute;
+}
+
+ img{
+   height: 40px;
+ }
+
+#navbar li{
+  list-style: none;
+  display: inline-block;
+}
+
+ 
+ 
+#navbar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 80px;
+  display: flex;
+  align-items:center;
+  background: #8e0e00;
+  justify-content:flex-end;
+  box-shadow: 0px 1px 20px 1px  hsl(187, 43%, 12%);
+ 
+}
+
+#navbar a{
+  text-decoration: none;
+  cursor: pointer;
+  font-family: 'Blinker', sans-serif;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 30px;
+
+}
+ 
+ #main-page{
+   margin-top:100px;
+ }
+
+ #welcome-section{
+    background: linear-gradient(20deg,#232526,#414345);
+   margin-top: -50px;
+   margin-left: -10px;
+   height: 357px;
+   width: 1065px;
+   text-align: center;
+   padding: 100px;  `
+
+  }
+  #welcome-section h1{
+    font-size: 70px;
+  }
+  #welcome-section h3{
+    margin-top:-40px;
+    font-size: 30px;
+    font-weight: lighter;
+    font-style: italic;
+  }
+
+  .grid{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+  }
+  
+  .project-title{
+    text-align: center;
+    font-size: 40px;
+    margin-top:-40px;
+    font-size: 30px;
+    font-weight: lighter;
+    font-style: italic;
+  }
+
+  .box1{
+     
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+  .box2{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  
+  .box3{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box4{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box5{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box6{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h4{
+     
+    text-align: center;
+    border-bottom: solid 1px dodgerblue;
+     
+
+  }
+
+  #projects a{
+    text-decoration: none;
+    color: aliceblue;
+  }
+  .grid{
+    background: linear-gradient(45deg,#5a759c,#375a5c);
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .pic{
+    vertical-align: top;
+    height:300px ;
+    width: 300px;
+  }
+
+  .showall{
+    box-radius:6%;
+    background: #414345;
+    height: 3em;
+    width: 6em;
+    margin-left:0em; 
+  }
+
+  #contact li{
+    list-style: none;
+    padding: 40px;
+    display: inline;
+    justify-content: center;
+    
+
+  }
+
+  #contact a{
+    font-size: 2em;
+  }
+#contact ul{
+  position: relative;
+  left: 10em;
+}
+@media(max-width:400px){
+#contact li{
+  display:block;
+}
+
+.grid{
+  display:block;
+}
+}

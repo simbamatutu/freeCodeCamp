@@ -1,0 +1,59 @@
+ body{
+   background-color:lightgrey;
+   width: 980px;
+   margin: 40px;
+ }
+
+ 
+ article{
+   background-color:whitesmoke;
+   text-align: center;
+   padding: 10px;
+ }
+  article img{
+    text-align:center;
+  }
+
+ #title{
+   text-align: center;
+ }
+
+ article  figcaption{
+   text-align: center;
+    position: relative;
+    right: 80px;
+ }
+
+ article ul{
+   text-align: left;
+ }
+  
+ .footer{
+   font-weight: bold;
+   font-size: 30px;
+ }
+ 
+#image{
+  max-width: 700px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+}
+
+ 
+
+ #nkomoImg{
+   position: relative;
+   left: 24%;
+   height: 100px;
+   max-width: 70em;
+   display: inline;
+ 
+ }
+
+ 
+  
